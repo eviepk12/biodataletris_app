@@ -58,7 +58,7 @@ require '../koneksi.php';
                                     <?php
                                 }
                                 else {
-                                    echo "<h4> Data Siswa Tidak Ditemukan </h4";
+                                    echo "<h4> Data Siswa Tidak Ditemukan </h4>";
                                 }
                             }
                         ?>
