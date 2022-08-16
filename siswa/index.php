@@ -25,6 +25,7 @@
                         <table class="table table-bordered table-striped">
                             <thead>
                             <tr>
+                                <th>NIS</th>
                                 <th>ID</th>
                                 <th>Nama Siswa</th>
                                 <th>Email</th>
@@ -37,7 +38,8 @@
                             <tbody>
                                 <?php
                                     $query = "SELECT 
-                                                siswa.id AS id_siswa, 
+                                                siswa.id AS id_siswa,
+                                                siswa.nis AS nis_siswa,
                                                 siswa.nama AS nama_siswa, 
                                                 siswa.email AS email_siswa, 
                                                 siswa.no_hp AS no_hp_siswa,
@@ -51,6 +53,7 @@
                                         
                                             ?>
                                             <tr>
+                                                <td><?=$siswa['nis_siswa']?></td>
                                                 <td><?=$siswa['id_siswa']?></td>
                                                 <td><?=$siswa['nama_siswa']?></td>
                                                 <td><?=$siswa['email_siswa']?></td>

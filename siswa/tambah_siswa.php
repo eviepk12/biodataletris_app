@@ -20,6 +20,10 @@ require '../koneksi.php';
                         <form action="controller.php" method="POST">
 
                         <div class="mb-3">
+                            <label>NIS</label>
+                            <input type="text" name="nis" class="form-control">
+                        </div>
+                        <div class="mb-3">
                             <label>Nama Siswa</label>
                             <input type="text" name="nama" class="form-control">
                         </div>
@@ -34,6 +38,7 @@ require '../koneksi.php';
                         <div class="mb-3">
                             <label>Jurusan</label>
                             <select class="form-control" name="id_jurusan">
+                            
                             <?php
                                     $query = "SELECT * FROM jurusan";
                                     $query_run = mysqli_query($con, $query);
@@ -51,6 +56,7 @@ require '../koneksi.php';
                                         echo "<h5>Belum Ada Data Jurusan</h5>";
                                     }
                             ?>
+                            
                             </select>
                         </div>
                         <div class="mb-3">

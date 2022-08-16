@@ -43,12 +43,13 @@ if (isset($_POST['ubah_data_siswa'])) {
 }
 
 if (isset($_POST['simpan'])) {
+    $nis = mysqli_real_escape_string($con, $_POST['nis']);
     $nama = mysqli_real_escape_string($con, $_POST['nama']);
     $email = mysqli_real_escape_string($con, $_POST['email']);
     $no_hp = mysqli_real_escape_string($con, $_POST['no_hp']);
     $id_jurusan = mysqli_real_escape_string($con, $_POST['id_jurusan']);
 
-    $query = "INSERT INTO siswa (nama, email, no_hp, id_jurusan) VALUES ('$nama', '$email', '$no_hp', '$id_jurusan')";
+    $query = "INSERT INTO siswa (nis, nama, email, no_hp, id_jurusan) VALUES ('$nis','$nama', '$email', '$no_hp', '$id_jurusan')";
 
     $query_run = mysqli_query($con, $query);
     if($query_run) {
