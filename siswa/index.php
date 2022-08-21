@@ -45,13 +45,12 @@
                                                 siswa.no_hp AS no_hp_siswa,
                                                 jurusan.jurusan AS nama_jurusan
                                               FROM siswa, jurusan WHERE jurusan.id = siswa.id_jurusan";
-                                    $query_run = mysqli_query($con, $query);
+                                    $query_run = mysqli_query($con, $query); # melakukan query ke database mysqli_query(connection, query, resultmode)
 
                                     if (mysqli_num_rows($query_run) > 0) {
                                         foreach($query_run as $siswa) {
-                                            
-                                        
                                             ?>
+
                                             <tr>
                                                 <td><?=$siswa['nis_siswa']?></td>
                                                 <td><?=$siswa['id_siswa']?></td>

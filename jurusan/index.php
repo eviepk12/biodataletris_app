@@ -38,9 +38,8 @@
 
                                     if (mysqli_num_rows($query_run) > 0) {
                                         foreach($query_run as $jurusan) {
-                                            
-                                        
                                             ?>
+
                                             <tr>
                                                 <td><?=$jurusan['id']?></td>
                                                 <td><?=$jurusan['jurusan']?></td>
